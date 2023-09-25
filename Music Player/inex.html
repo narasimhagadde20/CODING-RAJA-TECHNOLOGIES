@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <div class="playlist-manager">
+            <h2>Create and Manage Playlists</h2>
+            <input type="text" id="new-playlist" placeholder="Enter playlist name">
+            <button id="create-playlist">Create Playlist</button>
+            <ul class="playlist-list">
+                <!-- Display user-created playlists here -->
+            </ul>
+        </div>
+        <div class="music-library">
+            <h2>Your Music Library</h2>
+            <ul class="track-list">
+                <li data-track="song1.mp3">
+                    <img src="song1.jpg" alt="Song 1">
+                    Song 1
+                </li>
+                <li data-track="song2.mp3">
+                    <img src="song2.jpg" alt="Song 2">
+                    Song 2
+                </li>
+                <li data-track="song3.mp3">
+                    <img src="song3.jpg" alt="Song 3">
+                    Song 3
+                </li>
+                <!-- Add more tracks as needed with images -->
+            </ul>
+        </div>
+        <div class="audio-controls">
+            <h2>Audio Controls</h2>
+            <audio id="audio-player" controls>
+                <!-- Audio player controls (play, pause, volume, etc.) -->
+                <source src="" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div class="progress-bar">
+                <input type="range" id="progress" min="0" max="100" value="0">
+            </div>
+            <div class="playback-buttons">
+                <button id="play-button">Play</button>
+                <button id="pause-button">Pause</button>
+                <button id="next-button">Next</button>
+                <button id="prev-button">Previous</button>
+            </div>
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="shuffle-checkbox"> Shuffle
+                </label>
+                <label>
+                    <input type="checkbox" id="repeat-checkbox"> Repeat
+                </label>
+            </div>
+        </div>
+    </div>
+  
+    <script src="script.js"></script>
+</body>
+</html>
